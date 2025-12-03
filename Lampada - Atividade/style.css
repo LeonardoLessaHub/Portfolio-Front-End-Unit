@@ -1,0 +1,12 @@
+body {
+    background: radial-gradient(circle,rgb(235, 255, 52) 8%, white 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    cursor: pointer;
+}

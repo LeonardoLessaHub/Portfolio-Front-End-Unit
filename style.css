@@ -1,0 +1,429 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth; 
+}
+
+body {
+  font-family: "Inter", "Cinzel Decorative", "BBH Sans Hegarty", "Playfair Display", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background-color: #7f598c41;
+  color: #090e17;
+}
+
+header  {
+    background-color:#240143;
+}
+
+.navbar {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-links a {
+  color: #ffffff;
+  text-decoration: none;
+  font: "BBH Sans Hegarty";
+  font-weight: 900;
+  letter-spacing: 0.14em;
+  font-size: 20px;
+  position: relative;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.3rem;
+  width: 0;
+  height: 2px;
+  background-color: #ffffff;
+  transition: width 0.2s ease-in-out;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.nav-links li + li::before {
+  content: "";
+  display: inline-block;
+  width: 1px;
+  height: 15px;
+  background-color: rgba(255, 255, 255, 0.3);
+  margin-right: 1.5rem;
+}
+
+header p {
+  color: #e5e7eb;
+  font-size: 14px;
+}
+
+.logo {
+  font-size: 1.5rem;
+}
+
+.hero {
+  max-width: 1000px;
+  margin: 1rem auto;
+  padding: 2rem 2rem;
+}
+
+/* Hero */
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.hero-text {
+  flex: 1;
+}
+
+.hero-text h2 {
+    font-family: "Cinzel Decorative";
+    font-weight: 800;
+    font-size: 52px;
+}
+
+.hero-text p {
+  max-width: 400px;
+}
+
+.hero-image {
+  flex: 0 0 auto;
+}
+
+.hero-image img {
+  width: 250px;
+  height: auto;
+  border-radius: 120px;
+  object-fit: cover;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 1rem 1.5rem;
+  border-radius: 999px;
+  border: none;
+  background-color: #58198f;
+  color: #ffffff;
+  text-decoration: none;
+  font: "BBH Sans Hegarty";
+  font-weight: 900;
+  transition: transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1), background-color 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.btn:hover {
+  transform: translateY(-2px) scale(1.06);
+  background-color: #7a00cc;
+}
+
+/* Seções */
+.section {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 1rem 0;
+}
+
+#projetos {
+    text-align: center;
+}
+
+#projetos h2 {
+  text-align: center;
+  font-size: 80px;
+}
+
+.tech-tabs {
+  margin: 1.5rem auto 0;
+  padding: 0.5rem;
+  max-width: 400px;
+  background-color: #f5f5f8;
+  border-radius: 999px;
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+/* CADA TAB */
+.tech-tab {
+  flex: 1;
+  border: none;
+  border-radius: 999px;
+  padding: 0.6rem 0.8rem;
+  background: transparent;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #240143;
+  transition: background-color 0.2s ease-out, color 0.2s ease-out,
+    transform 0.15s ease-out;
+}
+
+/* TAB ATIVA */
+.tech-tab.active {
+  background-color: #58198f;
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+/* HOVER */
+.tech-tab:hover {
+  background-color: #9131ff8b
+}
+
+
+/* GRID DE PROJETOS */
+.projetos-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+/* CARD */
+.projeto-card {
+  padding: 1.2rem;
+  border-radius: 12px;
+  background-color: #510d90;
+  color: #ffffff;
+}
+
+/* LINK DO CARD */
+.projeto-card a {
+  text-decoration: none;
+  color: #e5e7eb;
+  font-weight: 600;
+}
+
+/* WRAPPER DAS SKILLS */
+.skills-wrapper {
+  max-width: 600px;
+  margin: 2rem auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* CADA LINHA DE SKILL */
+.skill-item {
+  display: grid;
+  grid-template-columns: 100px 1fr 60px;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+/* NOME: HTML / CSS / JS */
+.skill-label {
+  font-weight: 600;
+}
+
+/* BARRA AO FUNDO */
+.skill-bar {
+  width: 100%;
+  height: 10px;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.1); /* parte “vazia” */
+  overflow: hidden;
+}
+
+/* PARTE PREENCHIDA */
+.skill-fill {
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #ca2efa, #4f007d);
+  transition: width 0.4s ease-out;
+}
+
+/* PORCENTAGEM À DIREITA */
+.skill-percent {
+  text-align: right;
+  font-weight: 600;
+}
+
+
+@media (max-width: 600px) {
+  .skill-item {
+    grid-template-columns: 1fr;
+    gap: 0.4rem;
+  }
+
+  .skill-percent {
+    text-align: left;
+  }
+}
+
+@media (max-width: 900px) {
+  .projetos-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .projetos-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+footer {
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 2rem;
+  font-size: 0.875rem;
+  color: #00000094;
+  border-top: 1px solid #1f2937;
+}
+
+.section h2 {
+    font-family: "Playfair Display";
+    font-weight: 700;
+    font-size: 32px;
+}
+
+#contato-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.5rem;
+    background-color: #f5f5f8;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+#contato-form > div {
+    display: flex;
+    flex-direction: column;
+}
+
+#contato-form label {
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+    color: #240143;
+}
+
+#contato-form input[type="text"],
+#contato-form input[type="email"],
+#contato-form textarea {
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+#contato-form input:focus,
+#contato-form textarea:focus {
+    border-color: #58198f;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(88, 25, 143, 0.2);
+}
+
+#contato-form textarea {
+    resize: vertical;
+}
+
+.btn-submit {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    border-radius: 999px;
+    border: none;
+    background-color: #58198f;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: 900;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
+    align-self: flex-start;
+    margin-top: 0.5rem;
+}
+
+.btn-submit:hover {
+    background-color: #7a00cc;
+    transform: translateY(-1px);
+}
+
+.error-text {
+    color: #cc0000;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+    height: 1.2rem;
+}
+
+.contato-content {
+    display: flex;
+    gap: 2.5rem;
+    margin-top: 2rem;
+}
+
+.contato-form-wrapper, .contato-map-wrapper {
+    flex: 1;
+}
+
+.contato-map-wrapper h3 {
+    font-family: "Cinzel Decorative";
+    font-weight: 700;
+    font-size: 24px;
+    margin-bottom: 1rem;
+    color: #240143;
+}
+
+.map-container {
+    height: 350px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.map-container iframe {
+    display: block;
+}
+
+@media (max-width: 800px) {
+    .contato-content {
+        flex-direction: column;
+    }
+
+    .map-container {
+        height: 300px;
+    }
+}
+
+.projeto-card p {
+  font-size: 14px;
+}
+
+.projeto-card a {
+  font-family: "BBH Sans Hegarty";
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.fade-out {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out; 
+    pointer-events: none;
+}
+
+.fade-in {
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
